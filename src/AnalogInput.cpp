@@ -51,7 +51,7 @@ void AnalogInput::calibrate()
 
 short AnalogInput::getPin()
 {
-    return pin;
+    return this->pin;
 }
 
 short AnalogInput::getValue()
@@ -63,7 +63,7 @@ short AnalogInput::getValue()
         calibrate();
     }
 
-    if (reverse)
+    if (this->reverse)
     {
         return map(this->raw, (this->min + this->deadZone), (this->max - this->deadZone), 1023, 0);
     }
