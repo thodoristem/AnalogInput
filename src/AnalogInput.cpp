@@ -28,7 +28,7 @@ AnalogInput::AnalogInput(byte pin, short deadZone, short min, short max)
 
 void AnalogInput::begin()
 {
-    pinMode(this->pin, INPUT);
+    pinMode(this->pin, INPUT_PULLUP);
 }
 
 void AnalogInput::reverseDir()
